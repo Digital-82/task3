@@ -1,0 +1,34 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+product_collection:
+    path: entity/products
+    methods: [GET]
+    controller: App\Controller\ProductController::getCollection
+
+product_item:
+    path: entity/products/{id}
+    methods: [GET]
+    controller: App\Controller\ProductController::getItem
+
+product_create:
+    path: entity/products
+    methods: [POST]
+    controller: App\Controller\ProductController::post
+
+product_update:
+    path: entity/products/{id}
+    methods: [PUT]
+    controller: App\Controller\ProductController::put
+
+product_partial_update:
+    path: entity/products/{id}
+    methods: [PATCH]
+    controller: App\Controller\ProductController::patch
+
+product_delete:
+    path: entity/products/{id}
+    methods: [DELETE]
+    controller: App\Controller\ProductController::delete
